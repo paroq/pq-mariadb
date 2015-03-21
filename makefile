@@ -45,7 +45,7 @@ CFLAGS += -I$(pq-ncurses-dir)/include/ncurses/
 CPPFLAGS += -I$(pq-ncurses-dir)/include/ncurses/
 
 build-stamp: stage-stamp
-	$(MAKE) -C $(pq_part_name) mkinstalldirs=$(part_dir) VERBOSE=1 -j1
+	$(MAKE) -C $(pq_part_name) mkinstalldirs=$(part_dir) VERBOSE=1
 	$(MAKE) -C $(pq_part_name) mkinstalldirs=$(part_dir) DESTDIR=$(stage_dir) install
 	touch $@
 
