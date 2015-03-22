@@ -40,6 +40,8 @@ pq_mariadb_cmake_flags += -DCURSES_NCURSES_LIBRARY=$(pq-ncurses-dir)/lib/libncur
 pq_mariadb_cmake_flags += -DCURSES_CURSES_LIBRARY=$(pq-ncurses-dir)/lib/libncurses.so
 pq_mariadb_cmake_flags += -DCURSES_HAVE_CURSES_H=1
 pq_mariadb_cmake_flags += -DHAVE_NCURSES_H=1
+pq_mariadb_cmake_flags += -DOPENSSL_LIBRARIES=$(pq-openssl-dir)/lib/libssl.so
+pq_mariadb_cmake_flags += -DCRYPTO_LIBRARY=$(pq-openssl-dir)/lib/libcrypto.so
 
 CFLAGS += -I$(pq-ncurses-dir)/include/ncurses/
 CPPFLAGS += -I$(pq-ncurses-dir)/include/ncurses/
